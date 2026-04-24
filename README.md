@@ -7,17 +7,17 @@ openssh_for_X86_operation_system_rpm
 mkdir /soft  ##创建文件夹 \
 ##安装依赖包 \
 yum install -y imake rpm-build pam-devel krb5-devel zlib-devel libXt-devel libX11-devel gtk2-devel perl perl-IPC-Cmd \
-mkdir -p /root/rpmbuild/{RPMS,SOURCES,SPECS}
-cd /root/rpmbuild/SOURCES
-wget https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz
-wget https://src.fedoraproject.org/repo/pkgs/openssh/x11-ssh-askpass-1.2.4.1.tar.gz/8f2e41f3f7eaa8543a2440454637f3c3/x11-ssh-askpass-1.2.4.1.tar.gz
-wget https://www.openssl.org/source/openssl-3.0.13.tar.gz
-分别上传openssh.spec和pam.d文件到/root/rpmbuild/SPECS和/root/rpmbuild/SOURCES下
-cd /root/rpmbuild/SPECS
-rpmbuild -ba openssh.spec
-rpm -ivh  /soft/openssh/openssh-9.6p1-1.an8.src.rpm
-cd /soft/openssh/
-yum install -y openssh*.rpm
+mkdir -p /root/rpmbuild/{RPMS,SOURCES,SPECS} \
+cd /root/rpmbuild/SOURCES \
+wget https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz \
+wget https://src.fedoraproject.org/repo/pkgs/openssh/x11-ssh-askpass-1.2.4.1.tar.gz/8f2e41f3f7eaa8543a2440454637f3c3/x11-ssh-askpass-1.2.4.1.tar.gz \
+wget https://www.openssl.org/source/openssl-3.0.13.tar.gz \
+分别上传openssh.spec和pam.d文件到/root/rpmbuild/SPECS和/root/rpmbuild/SOURCES下 \
+cd /root/rpmbuild/SPECS \
+rpmbuild -ba openssh.spec \
+rpm -ivh  /soft/openssh/openssh-9.6p1-1.an8.src.rpm \
+cd /soft/openssh/ \
+yum install -y openssh*.rpm \
 
 
 
