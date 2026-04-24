@@ -53,10 +53,10 @@ rpm -ivh /soft/openssh/openssh-9.7p1-.el7.src.rpm \\\
 /soft/openssh/openssh-askpass-gnome-9.7p1-.el7.x86_64.rpm \\\
 /soft/openssh/openssh-debuginfo-9.7p1-.el7.x86_64.rpm 
 
-##重启服务
-chmod 600 /etc/ssh/ssh_host_rsa_key
-chmod 600 /etc/ssh/ssh_host_ecdsa_key
-chmod 600 /etc/ssh/ssh_host_ed25519_key
+##重启服务 \
+chmod 600 /etc/ssh/ssh_host_rsa_key \
+chmod 600 /etc/ssh/ssh_host_ecdsa_key \
+chmod 600 /etc/ssh/ssh_host_ed25519_key \
 systemctl restart sshd
 
 
@@ -84,4 +84,4 @@ chmod 600 /etc/ssh/ssh_host_ecdsa_key
 chmod 600 /etc/ssh/ssh_host_ed25519_key
 systemctl restart sshd
 
-scp /root/rpmbuild/SRPMS/openssh-9.7p1-oe2203.src.rpm /root/rpmbuild/RPMS/x86_64/openssh-askpass-gnome-9.7p1-oe2203.x86_64.rpm /root/rpmbuild/RPMS/x86_64/openssh-askpass-9.7p1-oe2203.x86_64.rpm /root/rpmbuild/RPMS/x86_64/openssh-debugsource-9.7p1-oe2203.x86_64.rpm /root/rpmbuild/RPMS/x86_64/openssh-server-9.7p1-oe2203.x86_64.rpm /root/rpmbuild/RPMS/x86_64/openssh-debuginfo-9.7p1-oe2203.x86_64.rpm /root/rpmbuild/RPMS/x86_64/openssh-clients-9.7p1-oe2203.x86_64.rpm /root/rpmbuild/RPMS/x86_64/openssh-9.7p1-oe2203.x86_64.rpm 192.168.100.106:/soft/.
+
