@@ -61,12 +61,12 @@ systemctl restart sshd
 
 
 
-scp /root/rpmbuild/SRPMS/openssh-9.7p1-.el7.src.rpm \
-/root/rpmbuild/RPMS/x86_64/openssh-9.7p1-.el7.x86_64.rpm \
-/root/rpmbuild/RPMS/x86_64/openssh-clients-9.7p1-.el7.x86_64.rpm \
-/root/rpmbuild/RPMS/x86_64/openssh-server-9.7p1-.el7.x86_64.rpm \
-/root/rpmbuild/RPMS/x86_64/openssh-askpass-9.7p1-.el7.x86_64.rpm \
-/root/rpmbuild/RPMS/x86_64/openssh-askpass-gnome-9.7p1-.el7.x86_64.rpm \
+scp /root/rpmbuild/SRPMS/openssh-9.7p1-.el7.src.rpm \\\
+/root/rpmbuild/RPMS/x86_64/openssh-9.7p1-.el7.x86_64.rpm \\\
+/root/rpmbuild/RPMS/x86_64/openssh-clients-9.7p1-.el7.x86_64.rpm \\\
+/root/rpmbuild/RPMS/x86_64/openssh-server-9.7p1-.el7.x86_64.rpm \\\
+/root/rpmbuild/RPMS/x86_64/openssh-askpass-9.7p1-.el7.x86_64.rpm \\\
+/root/rpmbuild/RPMS/x86_64/openssh-askpass-gnome-9.7p1-.el7.x86_64.rpm \\\
 /root/rpmbuild/RPMS/x86_64/openssh-debuginfo-9.7p1-.el7.x86_64.rpm ptdb01:/soft/.
 
 
