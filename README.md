@@ -44,14 +44,14 @@ yum install -y libxml2-devel \
 yum install -y libxslt-devel \
 yum install -y libqb libqb-devel 
 
-rpm -e `rpm -qa | grep openssh` --nodeps \\\
-rpm -ivh /soft/openssh/openssh-9.7p1-.el7.src.rpm \
-/soft/openssh/openssh-9.7p1-.el7.x86_64.rpm \
-/soft/openssh/openssh-clients-9.7p1-.el7.x86_64.rpm \
-/soft/openssh/openssh-server-9.7p1-.el7.x86_64.rpm \
-/soft/openssh/openssh-askpass-9.7p1-.el7.x86_64.rpm \
-/soft/openssh/openssh-askpass-gnome-9.7p1-.el7.x86_64.rpm \
-/soft/openssh/openssh-debuginfo-9.7p1-.el7.x86_64.rpm \
+rpm -e `rpm -qa | grep openssh` --nodeps \
+rpm -ivh /soft/openssh/openssh-9.7p1-.el7.src.rpm \\
+/soft/openssh/openssh-9.7p1-.el7.x86_64.rpm \\\
+/soft/openssh/openssh-clients-9.7p1-.el7.x86_64.rpm \\\
+/soft/openssh/openssh-server-9.7p1-.el7.x86_64.rpm \\\
+/soft/openssh/openssh-askpass-9.7p1-.el7.x86_64.rpm \\\
+/soft/openssh/openssh-askpass-gnome-9.7p1-.el7.x86_64.rpm \\\
+/soft/openssh/openssh-debuginfo-9.7p1-.el7.x86_64.rpm 
 
 ##重启服务
 chmod 600 /etc/ssh/ssh_host_rsa_key
