@@ -45,7 +45,7 @@ yum install -y libxslt-devel \
 yum install -y libqb libqb-devel 
 
 rpm -e `rpm -qa | grep openssh` --nodeps \
-rpm -ivh /soft/openssh/openssh-9.7p1-.el7.src.rpm \\
+rpm -ivh /soft/openssh/openssh-9.7p1-.el7.src.rpm \\\
 /soft/openssh/openssh-9.7p1-.el7.x86_64.rpm \\\
 /soft/openssh/openssh-clients-9.7p1-.el7.x86_64.rpm \\\
 /soft/openssh/openssh-server-9.7p1-.el7.x86_64.rpm \\\
