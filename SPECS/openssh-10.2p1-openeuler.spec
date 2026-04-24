@@ -1,5 +1,5 @@
 %{?!opensslver: %global opensslver 3.0.13}
-%{?!opensshver: %global opensshver 10.3p1}
+%{?!opensshver: %global opensshver 10.2p1}
 
 %define static_openssl 1
 
@@ -10,7 +10,7 @@
 %{?openssl_dir:%global no_build_openssl 1}
 
 %global ver %{?opensshver}
-%global rel %{?opensshpkgrel}%{?dist}
+%global rel %{?opensshpkgrel}%{?dist}2.oe2203
 
 # OpenSSH privilege separation requires a user & group ID
 %global sshd_uid    74
@@ -145,12 +145,12 @@ BuildRequires: krb5-libs
 Summary: OpenSSH clients.
 Requires: openssh = %{version}-%{release}
 Group: Applications/Internet
-Obsoletes: ssh-clients
+Obsoletes: ssh-clients < %{version}
 
 %package server
 Summary: The OpenSSH server daemon.
 Group: System Environment/Daemons
-Obsoletes: ssh-server
+Obsoletes: ssh-server < %{version}
 Requires: openssh = %{version}-%{release}, chkconfig >= 0.9
 %if ! %{build6x}
 Requires: /etc/pam.d/system-auth
@@ -160,13 +160,13 @@ Requires: /etc/pam.d/system-auth
 Summary: A passphrase dialog for OpenSSH and X.
 Group: Applications/Internet
 Requires: openssh = %{version}-%{release}
-Obsoletes: ssh-extras
+Obsoletes: ssh-extras < %{version}
 
 %package askpass-gnome
 Summary: A passphrase dialog for OpenSSH, X, and GNOME.
 Group: Applications/Internet
 Requires: openssh = %{version}-%{release}
-Obsoletes: ssh-extras
+Obsoletes: ssh-extras < %{version}
 
 %description
 SSH (Secure SHell) is a program for logging into and executing
@@ -232,10 +232,8 @@ CFLAGS="$RPM_OPT_FLAGS -Os"; export CFLAGS
 %endif
 
 # Add OpenSSL library
-#Reconfig "configure Package"
 autoreconf -fi
 export LD_LIBRARY_PATH="%{openssl_dir}"
-#Start Configure
 %configure \
 	--sysconfdir=%{_sysconfdir}/ssh \
 	--libexecdir=%{_libexecdir}/openssh \
