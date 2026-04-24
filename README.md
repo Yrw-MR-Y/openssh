@@ -38,10 +38,10 @@ rpm -ivh /soft/openssh/openssh-9.6p1-.al8.src.rpm \\\
 
 
 
-yum install -y autoconf libtool libtool-lydl-devel libuuid-devel \\\
-yum install -y gettext-devel \\\
-yum install -y libxml2-devel \\\
-yum install -y libxslt-devel \\\
+yum install -y autoconf libtool libtool-lydl-devel libuuid-devel \
+yum install -y gettext-devel \
+yum install -y libxml2-devel \
+yum install -y libxslt-devel \
 yum install -y libqb libqb-devel 
 
 rpm -e `rpm -qa | grep openssh` --nodeps \\\
