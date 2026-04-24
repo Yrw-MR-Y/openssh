@@ -22,17 +22,17 @@ yum install -y openssh*.rpm \
 
 
 
-rpm -ivh /soft/openssh/openssh-9.6p1-.al8.src.rpm \
-/soft/openssh//openssh-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-clients-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-server-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-askpass-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-askpass-gnome-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-debugsource-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-debuginfo-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-clients-debuginfo-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-server-debuginfo-9.6p1-.al8.x86_64.rpm \
-/soft/openssh//openssh-askpass-debuginfo-9.6p1-.al8.x86_64.rpm \
+rpm -ivh /soft/openssh/openssh-9.6p1-.al8.src.rpm \\
+/soft/openssh//openssh-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-clients-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-server-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-askpass-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-askpass-gnome-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-debugsource-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-debuginfo-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-clients-debuginfo-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-server-debuginfo-9.6p1-.al8.x86_64.rpm \\
+/soft/openssh//openssh-askpass-debuginfo-9.6p1-.al8.x86_64.rpm \\
 /soft/openssh//openssh-askpass-gnome-debuginfo-9.6p1-.al8.x86_64.rpm
 
 
