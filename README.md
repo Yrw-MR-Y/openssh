@@ -1,6 +1,9 @@
 # openssh
 openssh_for_X86_operation_system_rpm
 ************************************************************************************示例如下、仅供参考**********************************************************************************
+
+
+
 mkdir /soft  ##创建文件夹
 yum install -y imake rpm-build pam-devel krb5-devel zlib-devel libXt-devel libX11-devel gtk2-devel perl perl-IPC-Cmd
 mkdir -p /root/rpmbuild/{RPMS,SOURCES,SPECS}
