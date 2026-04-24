@@ -71,17 +71,17 @@ scp /root/rpmbuild/SRPMS/openssh-9.7p1-.el7.src.rpm \
 
 
 
-rpm -ivh /root/openssh-9.7p1-oe2203.src.rpm \
-/root/openssh-askpass-gnome-9.7p1-oe2203.x86_64.rpm \
-/root/openssh-askpass-9.7p1-oe2203.x86_64.rpm \
-/root/openssh-debugsource-9.7p1-oe2203.x86_64.rpm \
-/root/openssh-server-9.7p1-oe2203.x86_64.rpm \
-/root/openssh-debuginfo-9.7p1-oe2203.x86_64.rpm \
-/root/openssh-clients-9.7p1-oe2203.x86_64.rpm \
-/root/openssh-9.7p1-oe2203.x86_64.rpm
-chmod 600 /etc/ssh/ssh_host_rsa_key
-chmod 600 /etc/ssh/ssh_host_ecdsa_key
-chmod 600 /etc/ssh/ssh_host_ed25519_key
+rpm -ivh /root/openssh-9.7p1-oe2203.src.rpm \\\
+/root/openssh-askpass-gnome-9.7p1-oe2203.x86_64.rpm \\\
+/root/openssh-askpass-9.7p1-oe2203.x86_64.rpm \\\
+/root/openssh-debugsource-9.7p1-oe2203.x86_64.rpm \\\
+/root/openssh-server-9.7p1-oe2203.x86_64.rpm \\\
+/root/openssh-debuginfo-9.7p1-oe2203.x86_64.rpm \\\
+/root/openssh-clients-9.7p1-oe2203.x86_64.rpm \\\
+/root/openssh-9.7p1-oe2203.x86_64.rpm \
+chmod 600 /etc/ssh/ssh_host_rsa_key \
+chmod 600 /etc/ssh/ssh_host_ecdsa_key \
+chmod 600 /etc/ssh/ssh_host_ed25519_key \
 systemctl restart sshd
 
 
