@@ -1,6 +1,6 @@
 # openssh
 openssh_for_X86_operation_system_rpm \
-**************示例如下、仅供参考******** \
+****示例如下、仅供参考*** \
 
 
 ##编译rpm包 \
