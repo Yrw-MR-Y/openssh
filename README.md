@@ -3,8 +3,9 @@ openssh_for_X86_operation_system_rpm
 ************************************************************************************示例如下、仅供参考**********************************************************************************
 
 
-
+##编译rpm包
 mkdir /soft  ##创建文件夹
+##安装依赖包
 yum install -y imake rpm-build pam-devel krb5-devel zlib-devel libXt-devel libX11-devel gtk2-devel perl perl-IPC-Cmd
 mkdir -p /root/rpmbuild/{RPMS,SOURCES,SPECS}
 cd /root/rpmbuild/SOURCES
@@ -21,20 +22,20 @@ yum install -y openssh*.rpm
 
 
 
-rpm -ivh /soft/openssh/openssh-9.6p1-.al8.src.rpm
-/soft/openssh//openssh-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-clients-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-server-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-askpass-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-askpass-gnome-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-debugsource-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-debuginfo-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-clients-debuginfo-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-server-debuginfo-9.6p1-.al8.x86_64.rpm
-/soft/openssh//openssh-askpass-debuginfo-9.6p1-.al8.x86_64.rpm
+rpm -ivh /soft/openssh/openssh-9.6p1-.al8.src.rpm \
+/soft/openssh//openssh-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-clients-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-server-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-askpass-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-askpass-gnome-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-debugsource-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-debuginfo-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-clients-debuginfo-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-server-debuginfo-9.6p1-.al8.x86_64.rpm \
+/soft/openssh//openssh-askpass-debuginfo-9.6p1-.al8.x86_64.rpm \
 /soft/openssh//openssh-askpass-gnome-debuginfo-9.6p1-.al8.x86_64.rpm
 
-##卸载openssh
+
 
 
 yum install -y autoconf libtool libtool-lydl-devel libuuid-devel 
@@ -50,7 +51,9 @@ rpm -ivh /soft/openssh/openssh-9.7p1-.el7.src.rpm \
 /soft/openssh/openssh-server-9.7p1-.el7.x86_64.rpm \
 /soft/openssh/openssh-askpass-9.7p1-.el7.x86_64.rpm \
 /soft/openssh/openssh-askpass-gnome-9.7p1-.el7.x86_64.rpm \
-/soft/openssh/openssh-debuginfo-9.7p1-.el7.x86_64.rpm
+/soft/openssh/openssh-debuginfo-9.7p1-.el7.x86_64.rpm \
+
+##重启服务
 chmod 600 /etc/ssh/ssh_host_rsa_key
 chmod 600 /etc/ssh/ssh_host_ecdsa_key
 chmod 600 /etc/ssh/ssh_host_ed25519_key
@@ -68,7 +71,6 @@ scp /root/rpmbuild/SRPMS/openssh-9.7p1-.el7.src.rpm \
 
 
 
-rpm -e `rpm -qa | grep openssh` --nodeps
 rpm -ivh /root/openssh-9.7p1-oe2203.src.rpm \
 /root/openssh-askpass-gnome-9.7p1-oe2203.x86_64.rpm \
 /root/openssh-askpass-9.7p1-oe2203.x86_64.rpm \
